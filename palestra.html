@@ -31,23 +31,19 @@
                 <!-- Cabeçalho da Tabela -->
                 <div class="bg-orange-900 p-6">
                     <h2 class="text-2xl font-bold text-white">Cronograma de Palestras 2026</h2>
-                    
                 </div>
 
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead class="bg-slate-50 border-b border-slate-200">
                             <tr>
-                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs tracking-wider">Data</th>
-                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs tracking-wider">
-                                    Palestrante
-                                </th>
-                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs tracking-wider">Tema</th>
+                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs">Data</th>
+                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs">Palestrante</th>
+                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs">Dirigente</th>
+                                <th class="p-4 text-slate-600 font-semibold uppercase text-xs">Tema</th>
                             </tr>
                         </thead>
-                        <tbody id="tabela-palestras" class="divide-y divide-slate-100">
-                            
-                        </tbody>
+                        <tbody id="tabela-palestras" class="divide-y divide-slate-100"></tbody>
                     </table>
                 </div>
             </div>
@@ -67,7 +63,11 @@
                     <h3 class="text-lg font-semibold mb-4 text-white">Links</h3>
                     <ul class="text-slate-400 text-sm space-y-2">
                         <li><a href="#" class="hover:text-orange-400 transition">Horários de Reunião</a></li>
-                        <li><a href="https://maps.app.goo.gl/2arcj86XwMzbvFhy5" class="hover:text-orange-400 transition">Como Chegar</a></li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/2arcj86XwMzbvFhy5" class="hover:text-orange-400 transition"
+                                >Como Chegar</a
+                            >
+                        </li>
                         <li><a href="#" class="hover:text-orange-400 transition">Doações e Campanhas</a></li>
                     </ul>
                 </div>
@@ -83,30 +83,41 @@
             <div class="text-center text-slate-500 text-xs mt-8">&copy; 2026 Coecx - Todos os direitos reservados.</div>
         </footer>
         <script>
-            const URL_PLANILHA =
-                "https://docs.google.com/spreadsheets/d/e/2PACX-1vRGmYIFO9yuwml_JLB99GRJgItW3oQEKajsf-rSX4doJgeSBCP_ueKnNw-zwFTzj2HCdZJqNl6pX0i7/pub?output=csv";
-
             async function carregarPalestras() {
-                const resposta = await fetch(URL_PLANILHA);
-                const dadosBrutos = await resposta.text();
+                const URL_PALESTRAS =
+                    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRGmYIFO9yuwml_JLB99GRJgItW3oQEKajsf-rSX4doJgeSBCP_ueKnNw-zwFTzj2HCdZJqNl6pX0i7/pub?output=csv"; // Certifique-se de que termina em output=csv
 
-                const linhas = dadosBrutos.split("\n").slice(1);
+                try {
+                    const resposta = await fetch(URL_PALESTRAS);
+                    const dadosBrutos = await resposta.text();
 
-                const corpoTabela = document.getElementById("tabela-palestras");
+                    const linhas = dadosBrutos.split(/\r?\n/).slice(1);
+                    const tabelaBody = document.getElementById("tabela-palestras");
+                    tabelaBody.innerHTML = "";
 
-                linhas.forEach((linha) => {
-                    const colunas = linha.split(",");
-                    if (colunas.length >= 3) {
-                        const novaLinha = `
-                <tr class="hover:bg-orange-50 transition-colors even:bg-slate-50/50">
-                <td class="p-4 text-slate-700 font-medium">${colunas[0]}</td>
-                <td class="p-4 text-slate-600">${colunas[1]}</td>
-                <td class="p-4 text-slate-800 font-semibold">${colunas[2]}</td>
-                </tr>
-                `;
-                        corpoTabela.innerHTML += novaLinha;
-                    }
-                });
+                    linhas.forEach((linha) => {
+                        let colunas = linha.includes(";") ? linha.split(";") : linha.split(",");
+
+                        if (colunas.length >= 2) {
+                            const data = colunas[0] || "---";
+                            const palestrante = colunas[1] || "---";
+                            const dirigente = colunas[2] || "---";
+                            const tema = colunas[3] || "Sem tema definido";
+
+                            const tr = `
+          <tr class="hover:bg-blue-50 transition-colors even:bg-slate-50/50 border-b border-slate-100">
+            <td class="p-4 text-slate-800 font-bold">${data}</td>
+            <td class="p-4 text-slate-800 font-bold">${palestrante}</td>
+            <td class="p-4 text-slate-800 font-bold">${dirigente}</td>
+            <td class="p-4 text-slate-800 italic text-sm font-bold">${tema}</td>
+          </tr>
+        `;
+                            tabelaBody.innerHTML += tr;
+                        }
+                    });
+                } catch (erro) {
+                    console.error("Erro ao carregar os dados:", erro);
+                }
             }
 
             carregarPalestras();
