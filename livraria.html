@@ -99,14 +99,14 @@
                         const [capa, titulo, autor, qtd] = linha.split(",");
                         return { capa, titulo, autor, qtd };
                     })
-                    .filter((livro) => livro.titulo); s
+                    .filter((livro) => livro.titulo); // Remove linhas vazias
 
-                exibirLivros(todosOsLivros); 
+                exibirLivros(todosOsLivros); // Chama a função para desenhar na tela
             }
 
             function exibirLivros(lista) {
                 const container = document.getElementById("vitrine-livros");
-                container.innerHTML = ""; 
+                container.innerHTML = ""; // Limpa a vitrine
 
                 lista.forEach((livro) => {
                     const mensagemZap = encodeURIComponent(`Olá! Gostaria de solicitar o livro "${livro.titulo}".`);
@@ -132,7 +132,7 @@
                 });
             }
 
-            // codigo de busca
+            // OUVINTE DE TECLADO (A Mágica da Busca)
             document.getElementById("input-busca").addEventListener("input", (e) => {
                 const termoBusca = e.target.value.toLowerCase();
 
