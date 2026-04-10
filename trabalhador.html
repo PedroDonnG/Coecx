@@ -1,10 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>COECX</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
     </head>
     <body>
-        <p>Nada para ver aqui meu chapa</p>
+        <header class="flex justify-between items-center p-4 shadow-md bg-white">
+            <a href="index.html" class="group flex items-center space-x-1">
+                <span
+                    class="text-2xl font-black tracking-tighter text-orange-900 group-hover:text-orange-700 transition-colors">
+                    COECX
+                </span>
+            </a>
+            <nav class="flex space-x-6 font-medium text-slate-700">
+                <a href="/coecx1.0-main/comunhao.html" class="hover:text-orange-900">A COMUNHÃO</a>
+                <a href="/coecx1.0-main/espiritismo.html" class="hover:text-orange-900"> O ESPIRITISMO</a>
+                <a href="./estudos.html" class="hover:text-orange-900">ESTUDOS</a>
+                <a href="./palestra.html" class="hover:text-orange-900">PALESTRAS E EVENTOS</a>
+            </nav>
+            <a
+                href="./trabalhador.html"
+                class="bg-orange-900 text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-800 transition"
+                >Trabalhador</a
+            >
+        </header>
+
+        <div id="login-screen" class="min-h-screen flex items-center justify-center bg-slate-50 px-4">
+            <div class="max-w-md w-full bg-white rounded-3xl shadow-xl p-10 border border-slate-100">
+                <div class="text-center mb-8">
+                    <div class="bg-orange-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="lock" class="text-orange-900 w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-800">Área do Trabalhador</h2>
+                    <p class="text-slate-500 text-sm mt-2">Identifique-se para acessar as ferramentas.</p>
+                </div>
+
+                <form onsubmit="verificarLogin(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Senha de Acesso</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            required
+                            class="w-full px-5 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-orange-900 transition"
+                            placeholder="Digite a senha da casa" />
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-orange-900 text-white font-bold py-4 rounded-xl hover:bg-orange-800 transition shadow-lg shadow-orange-900/20 flex items-center justify-center gap-2">
+                        Entrar no Painel
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </form>
+
+                <p id="erro-msg" class="text-red-500 text-xs text-center mt-4 hidden italic">
+                    Senha incorreta. Tente novamente.
+                </p>
+            </div>
+        </div>
+
+        
+        <div id="painel-conteudo" class="hidden">
+                    <section class="max-w-6xl mx-auto my-16 px-4">
+            
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Painel do Trabalhador</h2>
+                <p class="text-slate-500">Bem-vindo à sua área de ferramentas e coordenação.</p>
+            </div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card: Escala de Trabalho -->
+                <a
+                    href="#"
+                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+                    <div
+                        class="bg-orange-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-orange-100 transition-colors">
+                        <i data-lucide="calendar-range" class="w-6 h-6 text-orange-700"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-1">Escalas</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Confira sua data e horário nas atividades da casa.
+                    </p>
+                </a>
+
+                <!-- Card: Materiais Internos -->
+                <a
+                    href="#"
+                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-blue-200 hover:shadow-md transition-all">
+                    <div
+                        class="bg-blue-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+                        <i data-lucide="folder-open" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-1">Arquivos</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Acesse o Drive com apostilas, atas e documentos.
+                    </p>
+                </a>
+
+                <!-- Card: Avisos da Coordenação -->
+                <a
+                    href="#"
+                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-emerald-200 hover:shadow-md transition-all">
+                    <div
+                        class="bg-emerald-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors">
+                        <i data-lucide="megaphone" class="w-6 h-6 text-emerald-700"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-1">Comunicados</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Fique por dentro das últimas decisões e eventos internos.
+                    </p>
+                </a>
+
+                <!-- Card: Links Externos (FEB/Federação) -->
+                <a
+                    href="#"
+                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-purple-200 hover:shadow-md transition-all">
+                    <div
+                        class="bg-purple-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-purple-100 transition-colors">
+                        <i data-lucide="external-link" class="w-6 h-6 text-purple-700"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-1">Federação</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Links rápidos para o portal da FEB e Federação local.
+                    </p>
+                </a>
+            </div>
+        </section>
+        </div>
+
+        <footer class="bg-slate-900 text-white pt-12 pb-6 px-10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-slate-700 pb-10">
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 italic text-orange-400">COECX</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Comunhão Espírita Chico Xavier. <br />
+                        Um espaço dedicado ao estudo da Doutrina Espírita e ao auxílio fraterno.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Links</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li><a href="#" class="hover:text-orange-400 transition">Horários de Reunião</a></li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/2arcj86XwMzbvFhy5" class="hover:text-orange-400 transition"
+                                >Como Chegar</a
+                            >
+                        </li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Doações e Campanhas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Localização</h3>
+                    <p class="text-slate-400 text-sm mb-2">R. São Pedro, 768 - B - Formosinha</p>
+                    <p class="text-slate-400 text-sm mb-2">Formosa - Goiás | CEP 73801-400</p>
+                    <p class="text-slate-400 text-sm italic">contato@coecx.com.br</p>
+                </div>
+            </div>
+
+            <div class="text-center text-slate-500 text-xs mt-8">&copy; 2026 Coecx - Todos os direitos reservados.</div>
+        </footer>
+        <script>
+            function verificarLogin(event) {
+                event.preventDefault(); 
+
+                const senhaDigitada = document.getElementById("senha").value;
+                const senhaMestre = "coecx2026"; 
+                const erroMsg = document.getElementById("erro-msg");
+                const loginScreen = document.getElementById("login-screen");
+                const painelConteudo = document.getElementById("painel-conteudo");
+
+                if (senhaDigitada === senhaMestre) {
+                    // Esconde o login e mostra o painel
+                    loginScreen.classList.add("hidden");
+                    painelConteudo.classList.remove("hidden");
+
+                    
+                    localStorage.setItem("logado", "true");
+                    lucide.createIcons(); 
+                } else {
+                    erroMsg.classList.remove("hidden");
+                    document.getElementById("senha").value = "";
+                }
+            }
+
+            // Verifica se o usuário já logou anteriormente ao abrir a página
+            window.onload = function () {
+                if (localStorage.getItem("logado") === "true") {
+                    document.getElementById("login-screen").classList.add("hidden");
+                    document.getElementById("painel-conteudo").classList.remove("hidden");
+                    lucide.createIcons();
+                }
+            };
+        </script>
     </body>
 </html>
