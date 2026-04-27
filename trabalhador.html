@@ -8,23 +8,50 @@
         <script src="https://unpkg.com/lucide@latest"></script>
     </head>
     <body>
-        <header class="flex justify-between items-center p-4 shadow-md bg-white">
-            <a href="index.html" class="group flex items-center space-x-1">
-                <span
-                    class="text-2xl font-black tracking-tighter text-orange-900 group-hover:text-orange-700 transition-colors">
-                    COECX
-                </span>
-            </a>
-            <nav class="flex space-x-6 font-medium text-slate-700">
-                <a href="./espiritismo.html" class="hover:text-orange-900"> O ESPIRITISMO</a>
-                <a href="./estudos.html" class="hover:text-orange-900">ESTUDOS</a>
-                <a href="./palestra.html" class="hover:text-orange-900">PALESTRAS E EVENTOS</a>
-            </nav>
-            <a
-                href="./trabalhador.html"
-                class="bg-orange-900 text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-800 transition"
-                >Trabalhador</a
-            >
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="flex justify-between items-center px-6 py-5 max-w-7xl mx-auto">
+                <a href="index.html" class="flex items-center space-x-1 flex-shrink-0 z-50">
+                    <span class="text-2xl font-black tracking-tighter text-orange-600">COECX</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <nav class="flex space-x-8 font-bold text-slate-600 uppercase text-xs tracking-widest">
+                        <a href="./index.html" class="hover:text-orange-600 transition-colors">Início</a>
+                        <a href="./estudos.html" class="hover:text-orange-600 transition-colors">Estudos</a>
+                        <a href="./palestra.html" class="hover:text-orange-600 transition-colors">Palestras</a>
+                        <a href="./livraria.html" class="hover:text-orange-600 transition-colors">Biblioteca</a>
+                    </nav>
+
+                    <a
+                        href="./trabalhador.html"
+                        class="bg-orange-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-orange-800 transition shadow-md">
+                        Trabalhador
+                    </a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden z-50 text-orange-600 focus:outline-none p-2">
+                    <i data-lucide="menu" id="menu-icon" class="w-8 h-8"></i>
+                </button>
+
+                <div
+                    id="mobile-menu"
+                    class="fixed inset-0 bg-white flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-300 md:hidden z-40">
+                    <nav
+                        class="flex flex-col items-center space-y-8 text-xl font-black text-slate-800 uppercase text-center">
+                        <a href="./index.html" onclick="toggleMenu()">Início</a>
+                        <a href="./estudos.html" onclick="toggleMenu()">Estudos</a>
+                        <a href="./palestra.html" onclick="toggleMenu()">Palestras</a>
+                        <a href="./livraria.html" onclick="toggleMenu()">Biblioteca</a>
+
+                        <a
+                            href="./trabalhador.html"
+                            onclick="toggleMenu()"
+                            class="mt-4 bg-orange-600 text-white px-8 py-4 rounded-2xl text-lg shadow-lg">
+                            Trabalhador
+                        </a>
+                    </nav>
+                </div>
+            </div>
         </header>
 
         <div id="login-screen" class="min-h-screen flex items-center justify-center bg-slate-50 px-4">
@@ -62,79 +89,75 @@
             </div>
         </div>
 
-        
         <div id="painel-conteudo" class="hidden">
-                    <section class="max-w-6xl mx-auto my-16 px-4">
-            
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-slate-800">Painel do Trabalhador</h2>
-                <p class="text-slate-500">Bem-vindo à sua área de ferramentas e coordenação.</p>
-            </div>
+            <section class="max-w-6xl mx-auto my-16 px-4">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800">Painel do Trabalhador</h2>
+                    <p class="text-slate-500">Bem-vindo à sua área de ferramentas e coordenação.</p>
+                </div>
 
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card: Escala de Trabalho -->
-                <a
-                    href="#"
-                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
-                    <div
-                        class="bg-orange-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-orange-100 transition-colors">
-                        <i data-lucide="calendar-range" class="w-6 h-6 text-orange-700"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-1">Escalas</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Confira sua data e horário nas atividades da casa.
-                    </p>
-                </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card: Escala de Trabalho -->
+                    <a
+                        href="#"
+                        class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+                        <div
+                            class="bg-orange-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-orange-100 transition-colors">
+                            <i data-lucide="calendar-range" class="w-6 h-6 text-orange-700"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 mb-1">Escalas</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Confira sua data e horário nas atividades da casa.
+                        </p>
+                    </a>
 
-                <!-- Card: Materiais Internos -->
-                <a
-                    href="#"
-                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-blue-200 hover:shadow-md transition-all">
-                    <div
-                        class="bg-blue-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
-                        <i data-lucide="folder-open" class="w-6 h-6 text-blue-700"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-1">Arquivos</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Acesse o Drive com apostilas, atas e documentos.
-                    </p>
-                </a>
+                    <!-- Card: Materiais Internos -->
+                    <a
+                        href="#"
+                        class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-blue-200 hover:shadow-md transition-all">
+                        <div
+                            class="bg-blue-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+                            <i data-lucide="folder-open" class="w-6 h-6 text-blue-700"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 mb-1">Arquivos</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Acesse o Drive com apostilas, atas e documentos.
+                        </p>
+                    </a>
 
-                <!-- Card: Avisos da Coordenação -->
-                <a
-                    href="#"
-                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-emerald-200 hover:shadow-md transition-all">
-                    <div
-                        class="bg-emerald-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors">
-                        <i data-lucide="megaphone" class="w-6 h-6 text-emerald-700"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-1">Comunicados</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Fique por dentro das últimas decisões e eventos internos.
-                    </p>
-                </a>
+                    <!-- Card: Avisos da Coordenação -->
+                    <a
+                        href="#"
+                        class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-emerald-200 hover:shadow-md transition-all">
+                        <div
+                            class="bg-emerald-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors">
+                            <i data-lucide="megaphone" class="w-6 h-6 text-emerald-700"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 mb-1">Comunicados</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Fique por dentro das últimas decisões e eventos internos.
+                        </p>
+                    </a>
 
-                <!-- Card: Links Externos (FEB/Federação) -->
-                <a
-                    href="#"
-                    class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-purple-200 hover:shadow-md transition-all">
-                    <div
-                        class="bg-purple-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-purple-100 transition-colors">
-                        <i data-lucide="external-link" class="w-6 h-6 text-purple-700"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-1">Federação</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Links rápidos para o portal da FEB e Federação local.
-                    </p>
-                </a>
-            </div>
-        </section>
+                    <!-- Card: Links Externos (FEB/Federação) -->
+                    <a
+                        href="#"
+                        class="group bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-purple-200 hover:shadow-md transition-all">
+                        <div
+                            class="bg-purple-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-purple-100 transition-colors">
+                            <i data-lucide="external-link" class="w-6 h-6 text-purple-700"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 mb-1">Federação</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Links rápidos para o portal da FEB e Federação local.
+                        </p>
+                    </a>
+                </div>
+            </section>
         </div>
 
         <footer class="bg-slate-900 text-white pt-12 pb-6 px-10">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-slate-700 pb-10">
-                
                 <div>
                     <h3 class="text-xl font-bold mb-4 italic text-orange-400">COECX</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
@@ -167,11 +190,34 @@
             <div class="text-center text-slate-500 text-xs mt-8">&copy; 2026 Coecx - Todos os direitos reservados.</div>
         </footer>
         <script>
+            const btn = document.getElementById("mobile-menu-button");
+            const menu = document.getElementById("mobile-menu");
+            const icon = document.getElementById("menu-icon");
+
+            function toggleMenu() {
+                const menu = document.getElementById("mobile-menu");
+                const icon = document.getElementById("menu-icon");
+
+                menu.classList.toggle("opacity-100");
+                menu.classList.toggle("pointer-events-auto");
+
+                const isOpen = menu.classList.contains("opacity-100");
+                icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
+
+                lucide.createIcons();
+            }
+
+            btn.addEventListener("click", toggleMenu);
+        </script>
+        <script>
+            lucide.createIcons();
+        </script>
+        <script>
             function verificarLogin(event) {
-                event.preventDefault(); 
+                event.preventDefault();
 
                 const senhaDigitada = document.getElementById("senha").value;
-                const senhaMestre = "coecx2026"; 
+                const senhaMestre = "coecx2026";
                 const erroMsg = document.getElementById("erro-msg");
                 const loginScreen = document.getElementById("login-screen");
                 const painelConteudo = document.getElementById("painel-conteudo");
@@ -181,9 +227,8 @@
                     loginScreen.classList.add("hidden");
                     painelConteudo.classList.remove("hidden");
 
-                    
                     localStorage.setItem("logado", "true");
-                    lucide.createIcons(); 
+                    lucide.createIcons();
                 } else {
                     erroMsg.classList.remove("hidden");
                     document.getElementById("senha").value = "";
