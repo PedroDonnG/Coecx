@@ -214,60 +214,8 @@
                 <p class="text-slate-500 text-xs font-medium">&copy; 2026 COECX - Todos os direitos reservados.</p>
             </div>
         </footer>
-        <script>
-            const btn = document.getElementById("mobile-menu-button");
-            const menu = document.getElementById("mobile-menu");
-            const icon = document.getElementById("menu-icon");
+        <script src="https://unpkg.com/lucide@latest"></script>
 
-            function toggleMenu() {
-                const menu = document.getElementById("mobile-menu");
-                const icon = document.getElementById("menu-icon");
-
-                menu.classList.toggle("opacity-100");
-                menu.classList.toggle("pointer-events-auto");
-
-                const isOpen = menu.classList.contains("opacity-100");
-                icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
-
-                lucide.createIcons();
-            }
-
-            btn.addEventListener("click", toggleMenu);
-        </script>
-        <script>
-            lucide.createIcons();
-        </script>
-        <script>
-            function verificarLogin(event) {
-                event.preventDefault();
-
-                const senhaDigitada = document.getElementById("senha").value;
-                const senhaMestre = "coecx2026";
-                const erroMsg = document.getElementById("erro-msg");
-                const loginScreen = document.getElementById("login-screen");
-                const painelConteudo = document.getElementById("painel-conteudo");
-
-                if (senhaDigitada === senhaMestre) {
-                    // Esconde o login e mostra o painel
-                    loginScreen.classList.add("hidden");
-                    painelConteudo.classList.remove("hidden");
-
-                    localStorage.setItem("logado", "true");
-                    lucide.createIcons();
-                } else {
-                    erroMsg.classList.remove("hidden");
-                    document.getElementById("senha").value = "";
-                }
-            }
-
-            // Verifica se o usuário já logou anteriormente ao abrir a página
-            window.onload = function () {
-                if (localStorage.getItem("logado") === "true") {
-                    document.getElementById("login-screen").classList.add("hidden");
-                    document.getElementById("painel-conteudo").classList.remove("hidden");
-                    lucide.createIcons();
-                }
-            };
-        </script>
+        <script src="./auth.js"></script>
     </body>
 </html>
