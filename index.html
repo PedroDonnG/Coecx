@@ -3,195 +3,382 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>COECX</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://unpkg.com/lucide@latest"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+            rel="stylesheet" />
+        <title>Mariana Moura</title>
+        <style>
+            body {
+               body {
+            font-family: 'DM Sans', sans-serif;
+        }
+            }
+        </style>
     </head>
     <body>
-        <header class="bg-white shadow-sm sticky top-0 z-50">
-            <div class="flex justify-between items-center px-6 py-5 max-w-7xl mx-auto">
-                <a href="index.html" class="flex items-center space-x-1 flex-shrink-0 z-50">
-                    <span class="text-2xl font-black tracking-tighter text-orange-600">COECX</span>
+        <section class="w-full min-h-screen flex flex-col md:flex-row overflow-hidden bg-[#D9D9D9]">
+            <div class="flex-1 p-8 md:px-24 pt-12 md:pt-12 flex flex-col justify-start">
+                <span class="text-[#FFFFFF] uppercase tracking-[0.3em] text-xs font-bold mb-6 md:mb-10 opacity-90">
+                    Mariana Moura | Designer de interiores
+                </span>
+
+                <h1 class="text-[#8c360b] text-5xl lg:text-8xl font-extrabold leading-tight mb-6 md:mb-10">
+                    Design <br />
+                    que acolhe, <br />
+                    inspira e <br />
+                    transforma.
+                </h1>
+
+                <p class="text-[#401804] italic text-xl lg:text-2xl mb-10 md:mb-14 tracking-wide font-medium">
+                    CRIANDO AMBIENTES QUE TRADUZEM SEU <br class="hidden md:block" />
+                    ESTILO DE VIDA
+                </p>
+
+                <a
+                    href="https://wa.me/556196142106"
+                    class="inline-flex items-center bg-[#211815] text-white px-8 py-4 md:px-10 md:py-5 rounded-full w-fit group transition-all hover:bg-black mb-10 md:mb-0">
+                    <span
+                        class="bg-white text-black rounded-full p-2 mr-4 md:mr-5 group-hover:rotate-45 transition-transform">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2.5"
+                            stroke="currentColor"
+                            class="w-5 h-5 md:w-6 md:h-6">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </span>
+                    <span class="font-bold tracking-widest text-xs md:text-sm uppercase">Entre em contato</span>
                 </a>
+            </div>
 
-                <div class="hidden md:flex items-center space-x-8">
-                    <nav class="flex space-x-8 font-bold text-slate-600 uppercase text-xs tracking-widest">
-                        <a href="./index.html" class="hover:text-orange-600 transition-colors">Início</a>
-                        <a href="./estudos.html" class="hover:text-orange-600 transition-colors">Estudos</a>
-                        <a href="./palestra.html" class="hover:text-orange-600 transition-colors">Palestras</a>
-                        <a href="./livraria.html" class="hover:text-orange-600 transition-colors">Biblioteca</a>
-                    </nav>
+            <div class="flex-1 relative min-h-[50vh] md:min-h-screen">
+                <img
+                    src="./assets/img01.jpeg"
+                    alt="Design de interiores"
+                    class="absolute inset-0 w-full h-full object-cover object-center" />
+            </div>
+        </section>
 
-                    <a
-                        href="./trabalhador.html"
-                        class="bg-orange-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-orange-800 transition shadow-md">
-                        Trabalhador
-                    </a>
+        <section class="bg-[#D3D3D3] py-16 px-6 font-sans">
+            <div class="max-w-6xl mx-auto mb-12">
+                <div class="inline-block border-b-2 border-[#FFFFFF] pr-24">
+                    <h2 class="text-4xl md:text-3xl font-light text-[#401804] pb-4 tracking-widest">SERVIÇOS</h2>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto mb-16">
+                <div class="border border-[#401804] p-10 w-full md:w-[340px] text-left flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#4a3728] mb-8 leading-tight">CONSULTORIA EM INTERIORES</h3>
+                        <ul class="space-y-4 text-sm text-[#401804] uppercase tracking-wider">
+                            <li class="flex items-start"><span class="mr-3">•</span> LEVANTAMENTO DE MEDIDAS;</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> PLANTA DE LAYOUT BÁSICA;</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> MODELAGEM 3D;</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> INDICAÇÃO DE MATERIAIS.</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <button id="mobile-menu-button" class="md:hidden z-50 text-orange-600 focus:outline-none p-2">
-                    <i data-lucide="menu" id="menu-icon" class="w-8 h-8"></i>
-                </button>
+                <div class="border border-[#401804] p-10 w-full md:w-[340px] text-left flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#4a3728] mb-8 leading-tight">PROJETO DE INTERIORES</h3>
+                        <ul class="space-y-4 text-sm text-[#401804] uppercase tracking-wider">
+                            <li class="flex items-start"><span class="mr-3">•</span> CONSULTORIA EM INTERIORES</li>
+                            <li class="flex items-start">
+                                <span class="mr-3">•</span> PROJETO DE MARCENARIA E MOBILIÁRIO;
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3">•</span> PROJETO E QUANTITATIVO DE REVESTIMENTOS;
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3">•</span> PROJETO DE GESSO E LUMINOTÉCNICO;
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3">•</span> DETALHAMENTOS DE VISTAS E FACHADAS;
+                            </li>
+                            <li class="flex items-start"><span class="mr-3">•</span> VÍDEO 3D E VISTAS PANORÂMICAS.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border border-[#401804] p-10 w-full md:w-[340px] text-left flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#4a3728] mb-8 leading-tight">PROJETO DE ARQUITETURA</h3>
+                        <ul class="space-y-4 text-sm text-[#401804] uppercase tracking-wider">
+                            <li class="flex items-start"><span class="mr-3">•</span> ESTUDO PRELIMINAR</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> PLANTA DE LAYOUT</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> MODELAGEM 3D EXTERNA</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> PROJETO LEGAL (APROVAÇÃO)</li>
+                            <li class="flex items-start"><span class="mr-3">•</span> PROJETO EXECUTIVO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a
+                    href="https://wa.me/556196142106"
+                    class="inline-flex items-center bg-[#211815] text-white px-10 py-5 rounded-full w-fit group transition-all hover:bg-black">
+                    <span
+                        class="bg-white text-black rounded-full p-2 mr-5 group-hover:rotate-45 transition-transform shadow-md">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2.5"
+                            stroke="currentColor"
+                            class="w-6 h-6">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </span>
+                    <span class="font-bold tracking-[0.2em] text-sm uppercase">Entre em contato</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-[#e0e0e0] py-16 px-6 font-sans">
+            <div class="max-w-6xl mx-auto mb-10">
+                <div class="inline-block border-b-2 border-[#FFFFFF] pr-24">
+                    <h2 class="text-4xl md:text-3xl font-light text-[#4A3728] pb-4 tracking-widest uppercase">
+                        PROJETOS
+                    </h2>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                <div class="aspect-square overflow-hidden">
+                    <img src="./assets/img04.jpeg" alt="Projeto 1" class="w-full h-full object-cover" />
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="./assets/img03.jpeg" alt="Projeto 2" class="w-full h-full object-cover" />
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="./assets/img05.jpeg" alt="Projeto 3" class="w-full h-full object-cover" />
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="./assets/img02.jpeg" alt="Projeto 4" class="w-full h-full object-cover" />
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#A6A6A6] p-10 text-white min-h-[400px] flex flex-col">
+                    <div class="h-32 flex items-start">
+                        <h3 class="text-3xl font-normal leading-tight">Interiores<br />personalizados</h3>
+                    </div>
+
+                    <div class="mt-4 pt-8 border-t border-white/60">
+                        <p class="text-[15px] leading-relaxed mb-4">Cada projeto nasce do seu estilo de vida.</p>
+                        <p class="text-[15px] leading-relaxed">
+                            Criando ambientes que refletem quem você é, com autenticidade e cuidado em cada detalhe para
+                            te atender.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-[#A6A6A6] p-10 text-white min-h-[400px] flex flex-col">
+                    <div class="h-32 flex items-start">
+                        <h3 class="text-3xl font-normal leading-tight">Estética e<br />funcionalidade</h3>
+                    </div>
+
+                    <div class="mt-4 pt-8 border-t border-white/60">
+                        <p class="text-[15px] leading-relaxed mb-4">Beleza e praticidade caminham juntas.</p>
+                        <p class="text-[15px] leading-relaxed">
+                            Por esse motivo tudo é projetado para equilibrar a forma e a utilização dos espaços a fim de
+                            transformar em experiências completas com lazer, uso e segurança.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-[#A6A6A6] p-10 text-white min-h-[400px] flex flex-col">
+                    <div class="h-32 flex items-start">
+                        <h3 class="text-3xl font-normal leading-tight">Soluções sob<br />medida</h3>
+                    </div>
+
+                    <div class="mt-4 pt-8 border-t border-white/60">
+                        <p class="text-[15px] leading-relaxed mb-4">Nada é padrão.</p>
+                        <p class="text-[15px] leading-relaxed">
+                            Juntos desenvolvemos soluções únicas respeitando suas necessidades, rotina, desejos e
+                            possibilidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#E0E0E0] py-16 px-6 font-sans">
+            <div class="max-w-6xl mx-auto mb-10">
+                <div class="inline-block border-b-2 border-[#FFFFFF] pr-24">
+                    <h2 class="text-3xl font-normal text-[#401804] pb-2 uppercase tracking-widest">
+                        DEPOIMENTOS DOS CLIENTES
+                    </h2>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-[#8c360b] p-6 rounded-lg text-white flex flex-col justify-between min-h-[220px]">
+                    <p class="text-sm italic leading-relaxed">
+                        "A gente simplesmente amou o trabalho da @marianamourainteriores. Você é super criativa,
+                        inteligente e dinâmica. Sempre aberta às nossas ideias e disponível para tirar dúvidas. Foi uma
+                        experiência incrível ter você nesse projeto!"
+                    </p>
+                    <div class="text-right mt-4">
+                        <span class="block font-bold">Isaque</span>
+                        <span class="text-xs opacity-75">Instagram</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#8c360b] p-6 rounded-lg text-white flex flex-col justify-between min-h-[220px]">
+                    <p class="text-sm italic leading-relaxed">
+                        "Se identificar com nosso cantinho não tem preço... foi isso que aconteceu, me sinto em casa
+                        porque me reconheço nela. A vida faz mais sentido quando o ambiente reflete a identidade.
+                        Desafio para poucos que a @marianamourainteriores fez com maestria!"
+                    </p>
+                    <div class="text-right mt-4">
+                        <span class="block font-bold">Elias</span>
+                        <span class="text-xs opacity-75">Instagram</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#8c360b] p-6 rounded-lg text-white flex flex-col justify-between min-h-[220px]">
+                    <p class="text-sm italic leading-relaxed">
+                        "Amei cada detalhe, obrigada Mariana pelo seu profissionalismo."
+                    </p>
+                    <div class="text-right mt-4">
+                        <span class="block font-bold">Sonia</span>
+                        <span class="text-xs opacity-75">Instagram</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#8c360b] p-6 rounded-lg text-white flex flex-col justify-between min-h-[220px]">
+                    <p class="text-sm italic leading-relaxed">
+                        "Seu trabalho não apenas alcança metas, mas também redefine os padrões de excelência. Parabéns pelo excelente trabalho! Gratidão sempre."
+                    </p>
+                    <div class="text-right mt-4">
+                        <span class="block font-bold">@well_antenas</span>
+                        <span class="text-xs opacity-75">Instagram</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#8c360b] p-6 rounded-lg text-white flex flex-col justify-between min-h-[220px]">
+                    <p class="text-sm italic leading-relaxed">
+                        "Sabe aquela profissional super competente, que não mede esforços para deixar tudo como o cliente deseja e dentro de um orçamento possível? Pois bem, essa é a Mariana Moura, designer de interiores e engenheira civil, agora uma amiga."
+                    </p>
+                    <div class="text-right mt-4">
+                        <span class="block font-bold">@do_ris6447</span>
+                        <span class="text-xs opacity-75">Instagram</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#8c360b] p-6 rounded-lg text-white flex flex-col justify-between min-h-[220px]">
+                    <p class="text-sm italic leading-relaxed">
+                        "Amei cada detalhe, obrigada Mariana pelo seu profissionalismo."
+                    </p>
+                    <div class="text-right mt-4">
+                        <span class="block font-bold">@imperiodaspamonhas_</span>
+                        <span class="text-xs opacity-75">Instagram</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-10">
+                <a
+                    href="https://wa.me/556196142106"
+                    target="_blank"
+                    class="bg-[#20140f] text-white px-10 py-4 rounded-full flex items-center gap-3 hover:bg-gray-900 transition-all">
+                    <img src="./assets/icons8-whatsapp-50.png" class="w-6 h-6" alt="Whats" />
+                    <span class="font-bold tracking-widest text-sm uppercase">FAÇA JÁ SEU ORÇAMENTO</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-[#D9D9D9] py-20 px-6 font-sans">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 p-8 bg-[#D9D9D9]">
+                <div class="w-full max-w-md">
+                    <img src="./assets/tico2.png" alt="Foto" class="w-full h-auto" />
+                </div>
+
+                <div class="flex flex-col items-end max-w-[600px] text-right">
+                    <div class="border-t border-[#FFFFFF] pt-2 mb-6">
+                        <h2 class="text-3xl tracking-widest uppercase font-light text-[#401804]">Sobre Mim</h2>
+                    </div>
+
+                    <div class="space-y-1 text-[#401804] leading-relaxed text-justify text-sm md:text-base">
+                        <p>
+                            Sou <span class="font-semibold">Engenheira Civil</span> formada pelo IFG e atualmente
+                            graduanda em <span class="font-semibold">Design de Interiores</span>. Atuo há mais de seis
+                            anos no desenvolvimento de projetos arquitetônicos, modelagem 3D e renderizações, integrando
+                            técnica, estética e sensibilidade em cada detalhe.
+                        </p>
+
+                        <p>
+                            Acredito no poder transformador do design e tenho como propósito criar ambientes que
+                            acolham, funcionam com eficiência e traduzem a essência de cada pessoa.
+                        </p>
+
+                        <p>
+                            Após anos de atuação em escritórios de arquitetura e interiores, iniciei minha jornada
+                            independente. Essa transição fortaleceu meu olhar, refinou meu processo criativo e
+                            transformou minha relação com os espaços, que hoje desenvolvo com mais autonomia,
+                            sensibilidade e propósito.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col md:flex-row w-full bg-[#8C3B0B] overflow-hidden">
+            <div class="w-full md:w-1/3">
+                <img src="./assets/img6.jpeg" alt="Projeto de Interior" class="w-full h-full object-cover" />
+            </div>
+
+            <div class="w-full md:w-2/3 p-8 md:p-16 flex flex-col justify-center bg-[#8B4513] text-white">
+                <p class="text-sm md:text-base font-light tracking-widest mb-6">
+                    Mariana de Moura | Designer de Interiores
+                </p>
+
+                <h2 class="text-3xl md:text-5xl font-serif mb-10 leading-tight max-w-md">
+                    Vamos conversar sobre seu novo projeto?
+                </h2>
+
+                <a
+                    href="https://wa.me/556196142106"
+                    class="flex items-center gap-4 bg-[#1a1a1a] text-white w-fit px-6 py-3 rounded-full hover:bg-black transition-all">
+                    <div class="bg-white rounded-full p-1">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="#1a1a1a"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.978l-1.127 4.121 4.212-1.105a7.947 7.947 0 0 0 3.791.959h.003c4.369 0 7.927-3.558 7.929-7.926a7.852 7.852 0 0 0-2.33-5.62z" />
+                        </svg>
+                    </div>
+                    <span class="uppercase tracking-widest text-sm font-semibold">Faça já seu orçamento</span>
+                </a>
+            </div>
+        </section>
+        <footer class="bg-[#e0e0e0] py-3 px-6 font-sans border-t border-gray-300">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-[#4a3728]">
+                <div class="text-[10px] tracking-widest uppercase opacity-80">© 2026 Mariana Moura Interiores</div>
 
                 <div
-                    id="mobile-menu"
-                    class="fixed inset-0 bg-white flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-300 md:hidden z-40">
-                    <nav
-                        class="flex flex-col items-center space-y-8 text-xl font-black text-slate-800 uppercase text-center">
-                        <a href="./index.html" onclick="toggleMenu()">Início</a>
-                        <a href="./estudos.html" onclick="toggleMenu()">Estudos</a>
-                        <a href="./palestra.html" onclick="toggleMenu()">Palestras</a>
-                        <a href="./livraria.html" onclick="toggleMenu()">Biblioteca</a>
-
-                        <a
-                            href="./trabalhador.html"
-                            onclick="toggleMenu()"
-                            class="mt-4 bg-orange-600 text-white px-8 py-4 rounded-2xl text-lg shadow-lg">
-                            Trabalhador
-                        </a>
-                    </nav>
+                    class="flex flex-col md:flex-row gap-2 md:gap-6 text-[10px] uppercase tracking-[0.15em] opacity-70 text-center md:text-right">
+                    <p>Design por: <span class="font-bold text-[#4a3728]">Mylla Oliveira</span></p>
+                    <p>Desenvolvido por: <span class="font-bold text-[#4a3728]">Pedro Figueirêdo</span></p>
                 </div>
-            </div>
-        </header>
-        <section class="flex flex-col lg:flex-row items-center justify-between px-6 py-12 lg:px-20 lg:py-24 gap-10">
-            <div class="text-center lg:text-left lg:w-1/2 space-y-6">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
-                    Comunhão Espírita <span class="text-orange-600">Chico Xavier</span>
-                </h1>
-                <p class="text-slate-600 text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
-                    Um porto seguro para o seu despertar espiritual e prática do bem em Formosa-GO.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a
-                        href="./palestra.html"
-                        class="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">
-                        Ver Palestras
-                    </a>
-                    <a
-                        href="./assistencia.html"
-                        class="border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition">
-                        Agendar Atendimento
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:w-1/2 w-full mt-10 lg:mt-0">
-                <img
-                    src="./assets/logoCoecx.png"
-                    alt="CoECX"
-                    class="rounded-[2.5rem] shadow-2xl w-full object-cover h-64 md:h-96 lg:h-auto" />
-            </div>
-        </section>
-
-        <section class="px-6 py-16 bg-slate-50">
-            <h2 class="text-3xl font-bold text-center text-slate-800 mb-10">Nossas Atividades</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-orange-600 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold text-orange-600 mb-2">Estudos Espíritas</h3>
-                    <p class="text-slate-600 mb-4">
-                        Conheça o ESDE e outros grupos de estudo para o seu desenvolvimento espiritual.
-                    </p>
-                    <a href="./estudos.html" class="text-orange-600 font-bold hover:underline">Saber mais →</a>
-                </div>
-
-                <div class="bg-white p-6 rounded-3xl shadow-md border-b-4 border-orange-600 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold text-orange-600 mb-2">Atendimento Fraterno</h3>
-                    <p class="text-slate-600 mb-4">Aqui você pode marcar um conversa e esclarecer suas dúvidas.</p>
-                    <a href="./assistencia.html" class="text-orange-600 font-bold hover:underline"
-                        >Marque seu atendimento →</a
-                    >
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-orange-600 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold text-orange-600 mb-2">Livraria & Acervo</h3>
-                    <p class="text-slate-600 mb-4">
-                        Acesse as obras básicas e literatura complementar para aprofundar sua fé.
-                    </p>
-                    <a href="./livraria.html" class="text-orange-600 font-bold hover:underline">Ver acervo →</a>
-                </div>
-            </div>
-        </section>
-        <footer class="bg-slate-900 text-white py-16 px-6">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-1">
-                        <span class="text-2xl font-black tracking-tighter text-orange-500">COECX</span>
-                    </div>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
-                        Comunhão Espírita Chico Xavier.<br />
-                        Um espaço dedicado ao estudo da Doutrina Espírita e ao auxílio fraterno.
-                    </p>
-                </div>
-
-                <div class="space-y-6">
-                    <h3 class="text-white font-bold text-lg uppercase tracking-widest text-sm">Links Úteis</h3>
-                    <div class="flex flex-col space-y-3">
-                        <div class="flex items-center text-slate-400 text-sm">
-                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-orange-500"></i>
-                            Horário de Reunião: <span class="text-white ml-1 font-bold">19:30</span>
-                        </div>
-
-                        <a
-                            href="https://www.instagram.com/comunhaoespiritachicoxavier/"
-                            target="_blank"
-                            class="flex items-center group w-fit">
-                            <div class="bg-orange-500/10 p-2 rounded-lg group-hover:bg-orange-500 transition-colors">
-                                <i data-lucide="instagram" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
-                            </div>
-                            <span class="ml-3 text-slate-400 group-hover:text-orange-500 transition-colors font-medium"
-                                >Siga-nos no Instagram</span
-                            >
-                        </a>
-                    </div>
-                </div>
-
-                <div class="space-y-6">
-                    <h3 class="text-white font-bold text-lg uppercase tracking-widest text-sm">Localização</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-orange-500 flex-shrink-0 mt-1"></i>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                R. São Pedro, 758 - Formosinha<br />
-                                Formosa - Goiás | CEP 73801-400
-                            </p>
-                        </div>
-                        <a
-                            href="https://l.instagram.com/?u=https%3A%2F%2Fmaps.app.goo.gl%2F4umBh2woBigA73rBA%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnXrHNVgwn92-R_-Bvm9T3dXw3d8OvWgoZxDFW5AIcVxKFHVtBoUsFJbfF0Lw_aem__EpWPB8saacpRW8IuDy2vg&e=AT4oJBRXcpoG0gIU1neDOSJBOcm4h6_MYqx5gMmEPqj7cQ0syjPLe65XrKU9H2pEhIxJQOlnbTvUUnrU3tNisjLLq90C6bcZM0OPekjREA4QUAGIudY-GWWsnA"
-                            target="_blank"
-                            class="inline-block text-orange-500 text-xs font-bold uppercase tracking-wider hover:underline">
-                            Ver no Google Maps →
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center">
-                <p class="text-slate-500 text-xs font-medium">&copy; 2026 COECX - Todos os direitos reservados.</p>
             </div>
         </footer>
-        <script>
-            const btn = document.getElementById("mobile-menu-button");
-            const menu = document.getElementById("mobile-menu");
-            const icon = document.getElementById("menu-icon");
-
-            function toggleMenu() {
-                const menu = document.getElementById("mobile-menu");
-                const icon = document.getElementById("menu-icon");
-
-                menu.classList.toggle("opacity-100");
-                menu.classList.toggle("pointer-events-auto");
-
-                const isOpen = menu.classList.contains("opacity-100");
-                icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
-
-                lucide.createIcons();
-            }
-
-            btn.addEventListener("click", toggleMenu);
-        </script>
-        <script>
-            lucide.createIcons();
-        </script>
     </body>
 </html>
